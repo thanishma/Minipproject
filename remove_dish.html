@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Remove Dish</title>
+</head>
+<body>
+    <h1>Remove Dish</h1>
+    {% if message %}
+        <p>{{ message }}</p>
+    {% endif %}
+    <form action="/remove_dish" method="POST">
+        <label for="dish_id">Dish ID:</label>
+        <input type="number" id="dish_id" name="dish_id" required><br><br>
+        <input type="submit" value="Remove Dish">
+    </form>
+</body>
+</html>

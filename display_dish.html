@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Display Dishes</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            text-align: left;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Display Dishes</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Dish Name</th>
+            <th>Price</th>
+            <th>Category</th>
+        </tr>
+        {% for dish in dishes %}
+            <tr>
+                <td>{{ dish[0] }}</td>
+                <td>{{ dish[1] }}</td>
+                <td>{{ dish[2] }}</td>
+                <td>{{ dish[3] }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
